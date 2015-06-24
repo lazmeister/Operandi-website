@@ -41,10 +41,8 @@
             <div class="header-content-inner">
                 <img src="img/logo-white.svg" class="logo">
                 <h2>Making Tech work for you</h2>
-                <!--hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a-->
             </div>
+                <a class="page-scroll" href="#about"><div class="arrow bounce"></div></a>
         </div>
     </header>
 
@@ -98,6 +96,24 @@ Working with you and your team we can provide unique technology results based on
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    
+    <script>
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 400) {
+                $('.arrow').fadeOut();
+            } else {
+               if ($(this).scrollTop() > 400) {
+                   $('.arrow').fadeIn();
+               } else if ($(this).scrollTop() < 600) {
+                $('.arrow').fadeIn();
+               } else {
+                   $('.arrow').fadeOut();
+               }
+            }
+
+        });
+        
+    </script>
 
 </body>
 
